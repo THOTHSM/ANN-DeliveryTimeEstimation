@@ -1,49 +1,57 @@
-Summary of Porter Business Case Analysis
+# ANN : Delivery time estimation
 
-Overview
-The goal was to develop a predictive model to estimate delivery times for Porter, using a dataset with various features related to stores and delivery operations. The process involved data preprocessing, feature engineering, model building, hyper parameter tuning, and evaluation.
+### Overview
+The goal of this project was to develop a predictive model to estimate delivery times for Porter, utilizing a dataset comprising various features related to stores and delivery operations. The process encompassed data preprocessing, feature engineering, model building, hyperparameter tuning, and evaluation.
 
-Data Preprocessing
+### Goal
+The primary objective was to create a robust predictive model that accurately estimates delivery times based on the available data. This model aims to optimize Porter’s delivery operations, enhance customer satisfaction, and improve overall efficiency in logistics management.
 
-    Feature Engineering:
-        Encoding Categorical Variables: Mean encoding was used to transform categorical features such as store_id and store_primary_category into numerical values based on the mean target values.
-        Handling Missing Values: Missing values in the dataset were imputed using appropriate techniques to ensure completeness.
+### Summary:
 
-    Feature Scaling:
-        Standardization: Features were scaled using Standard Scaler to ensure that all features contributed equally to the model training.
+### Data Preprocessing
 
-Model Building and Hyper parameter Tuning
+#### Feature Engineering:
+- **Encoding Categorical Variables**: Mean encoding was employed to transform categorical features, such as `store_id` and `store_primary_category`, into numerical values based on their mean target values.
+- **Handling Missing Values**: Appropriate techniques were used to impute missing values in the dataset, ensuring completeness and usability of the data.
 
-    Neural Network Model:
-        A neural network model was defined with an input layer, several hidden layers with dropout for regularization, and an output layer.
-        Dropout layers were added to prevent overfitting, and the model was compiled with a learning rate of 0.0005 and the mean_squared_error loss function.
+#### Feature Scaling:
+- **Standardization**: Features were scaled using Standard Scaler to guarantee that all features contributed equally to the model training process.
 
-    Hyper parameter Search:
-        Hyper parameters Tuned:
-            Learning rate
-            Number of layers and nodes
-            Dropout rate
-            Regularization strengths (L1 and L2)
-        The model was trained with different combinations of these hyper parameters using a grid search approach to identify the best performing configuration.
+### Model Building and Hyperparameter Tuning
 
-Model Evaluation
+#### Neural Network Model:
+- A neural network model was defined with:
+  - An input layer
+  - Several hidden layers with dropout for regularization
+  - An output layer
+- Dropout layers were integrated to mitigate overfitting. The model was compiled with a learning rate of **0.0005** and utilized the **mean_squared_error** loss function.
 
-    Validation Performance:
-        The best model was selected based on the lowest mean squared error (MSE) on the validation set.
+#### Hyperparameter Search:
+- **Hyperparameters Tuned**:
+  - Learning rate
+  - Number of layers and nodes
+  - Dropout rate
+  - Regularization strengths (L1 and L2)
+- The model was trained with various combinations of these hyperparameters using a grid search approach to identify the best-performing configuration.
 
-    Final Model Performance:
-        MSE: 0.0791
-        RMSE: 0.2812
-        MAE: 0.1913
-        RÂ² Score: 0.2016
+### Model Evaluation
 
-    These metrics indicate a moderate level of performance, with the model explaining approximately 20% of the variance in delivery times. The MSE and RMSE values are relatively low, suggesting that the predictions are reasonably close to actual values.
+#### Validation Performance:
+- The best model was selected based on the lowest mean squared error (MSE) on the validation set.
 
-Key Takeaways
+#### Final Model Performance:
+- **MSE**: 0.0791
+- **RMSE**: 0.2812
+- **MAE**: 0.1913
+- **R² Score**: 0.2016
 
-    Feature Engineering and Feature Scaling were crucial steps in preparing the data for modeling.
-    Dropout and Regularization techniques were implemented to prevent overfitting and improve generalization.
-    The hyper parameter tuning process helped identify the optimal model configuration for the given data.
-    The final model demonstrated reasonable predictive performance, but there may be opportunities for further improvements through additional feature engineering or advanced modeling techniques.
+These metrics indicate a moderate level of performance, with the model explaining approximately 20% of the variance in delivery times. The MSE and RMSE values are relatively low, suggesting that the predictions are reasonably close to actual values.
 
-This summary provides a comprehensive view of the work completed and the results achieved in the Porter business case analysis.
+### Key Takeaways
+- Feature engineering and feature scaling were crucial steps in preparing the data for modeling.
+- Dropout and regularization techniques were implemented to prevent overfitting and enhance generalization.
+- The hyperparameter tuning process facilitated the identification of the optimal model configuration for the given data.
+- The final model demonstrated reasonable predictive performance; however, there may be opportunities for further improvements through additional feature engineering or advanced modeling techniques.
+
+This summary provides a comprehensive overview of the work completed and the results achieved in the Porter business case analysis.
+
